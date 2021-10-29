@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func nums_set(fromNum int, toNum int) []int {
+func numsSet(fromNum int, toNum int) []int {
 	len := (toNum - fromNum) + 1
 	nums := make([]int, len)
 	for i := 0; i < len; i++ {
@@ -14,7 +14,7 @@ func nums_set(fromNum int, toNum int) []int {
 	return nums
 }
 
-func num_search(numSet []int, numFind int) bool {
+func numSearch(numSet []int, numFind int) bool {
 	suggest := len(numSet) / 2
 	tries := 0
 	fmt.Printf("Initial set is %v.\nSuggestion is %v index\n", numSet, suggest)
@@ -41,6 +41,6 @@ func num_search(numSet []int, numFind int) bool {
 }
 
 func main() {
-	set := nums_set(0, 1024)
-	num_search(set, 402)
+	set := numsSet(0, 1024)
+	numSearch(set, 402)
 }
