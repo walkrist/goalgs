@@ -30,4 +30,10 @@ func OrderedIntList(start int, len int, step int) []int {
 
 // UnorderedIntList - generates list of given length
 // containing random integers in range [0,100)
-func UnorderedIntList(len int) {}
+func UnorderedIntList(len int) []int {
+	nums := make([]int, len)
+	for i := 0; i < len; i++ {
+		nums[i] = rand.Intn(100)
+	}
+	return nums
+}
