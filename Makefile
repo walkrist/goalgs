@@ -4,5 +4,4 @@ build:
 vet:
 	go vet ./...
 
-ci:
-	vet build
+ci: vet build
