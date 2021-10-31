@@ -10,9 +10,8 @@ func selectionSort(unorderedList []int) []int {
 	k := 0
 	len := len(unorderedList)
 	fmt.Printf("Initial list is %v\n\n", unorderedList)
-	min := unorderedList[k]
 	for j := k; j < len; j++ {
-		min = unorderedList[k]
+		min := unorderedList[k]
 		fmt.Printf("Starting %v iteration, min is on %v index it has value of %v\n\n", j+1, k, min)
 		for idx, val := range unorderedList[k+1:] {
 			if val <= min {
