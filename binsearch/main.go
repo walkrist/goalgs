@@ -23,16 +23,16 @@ func numSearch(numSet []int, numFind int) bool {
 				fmt.Printf("No luck after %v tries. Its not here\n", tries)
 				return false
 			case numSet[suggest] > numFind:
-				numSet = numSet[:suggest+1]
+				numSet = numSet[:suggest-1]
 			case numSet[suggest] < numFind:
-				numSet = numSet[suggest:]
+				numSet = numSet[suggest+1:]
 			}
-			suggest = len(numSet) / 2
+			suggest = (len(numSet) / 2)
 		}
 	}
 }
 
 func main() {
-	set := structgenerator.OrderedIntList(0, 1024)
-	numSearch(set, 402)
+	set := structgenerator.OrderedIntList(10, 100, 0)
+	numSearch(set, 89)
 }
