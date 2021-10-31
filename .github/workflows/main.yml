@@ -28,3 +28,7 @@ jobs:
       # Runs a golanci-lint
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v2.5.2
+
+      # Runs Makefile based simple checks
+      - name: Run make ci
+        run: make ci

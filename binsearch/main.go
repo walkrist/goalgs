@@ -2,17 +2,9 @@ package main
 
 import (
 	"fmt"
-)
 
-func numsSet(fromNum int, toNum int) []int {
-	len := (toNum - fromNum) + 1
-	nums := make([]int, len)
-	for i := 0; i < len; i++ {
-		nums[i] = fromNum
-		fromNum++
-	}
-	return nums
-}
+	"github.com/walkrist/goalgs/structgenerator"
+)
 
 func numSearch(numSet []int, numFind int) bool {
 	suggest := len(numSet) / 2
@@ -41,6 +33,6 @@ func numSearch(numSet []int, numFind int) bool {
 }
 
 func main() {
-	set := numsSet(0, 1024)
+	set := structgenerator.OrderedIntList(0, 1024)
 	numSearch(set, 402)
 }
