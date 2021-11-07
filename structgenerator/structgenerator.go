@@ -3,7 +3,12 @@ package structgenerator
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
 
 // OrderedIntList - generates simple ordered list of integers
 // from start integer with given lenght and step, if step == 0 then
