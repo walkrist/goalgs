@@ -36,7 +36,7 @@ func (set *MyHashSet) Contains(key int) bool {
 func (set *MyHashSet) Keys() []int {
 	var resultingSet []int
 	for i := 0; i < len(set.data); i++ {
-		if set.data[i] == true {
+		if set.data[i] {
 			resultingSet = append(resultingSet, i)
 		}
 	}
